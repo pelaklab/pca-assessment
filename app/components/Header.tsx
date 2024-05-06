@@ -14,7 +14,7 @@ const Header = () => {
             <div className='md:px-10 py-4 px-7 md:flex justify-between items-center bg-white md:px-10 px-7'
             >
                 <div className='font-bold text-2xl cursor-pointer flex items-center gap-1'>
-                    <PhotoIcon className='h-7 w-7 text-blue-500' />
+                    <PhotoIcon className='h-7 w-7 color-neutral-600' />
                     <span className='font-bold'> PCA Assessment </span>
                 </div>
                 {/* Menu icon*/}
@@ -32,7 +32,7 @@ const Header = () => {
                             )
                         })
                     }
-                    <button className='btn bg-blue-600 text-white px-3 py-1 md:ml-8 rounded md-static'>
+                    <button className='btn bg-neutral-700 text-white px-3 py-1 md:ml-8 rounded md-static'>
                         START
                     </button>
                 </ul>
