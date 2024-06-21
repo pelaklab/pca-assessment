@@ -3,37 +3,45 @@ import React from 'react';
 import Carousel from "react-material-ui-carousel"
 import Image from 'next/image'
 
-
+// TODO: stop the weird flashing behavior
 function Assessment() {
+  const [indicatorsVisible, setIndicatorVisibility] = React.useState(false)
+
   var items: ItemProps[] = [
     {
       name: "Intersecting images, overlapping figures",
-      path: "/poppelreuter-ghent-overlapping-figure.png"
+      path: "/poppelreuter-ghent-overlapping-figure.png",
+      onClick: () => setIndicatorVisibility(!indicatorsVisible)
     },
     {
       name: "Navon figure 1",
-      path: "/navon-figure-1.png"
+      path: "/navon-figure-1.png",
+      onClick: () => setIndicatorVisibility(!indicatorsVisible)
     },
     {
       name: "Navon figure 2",
-      path: "/navon-figure-2.png"
+      path: "/navon-figure-2.png",
+      onClick: () => setIndicatorVisibility(!indicatorsVisible)
     },
     {
       name: "Non-cursive writing",
-      path: "/non-cursive.png"
+      path: "/non-cursive.png",
+      onClick: () => setIndicatorVisibility(!indicatorsVisible)
     },
     {
       name: "Cursive writing",
-      path: "/cursive.png"
+      path: "/cursive.png",
+      onClick: () => setIndicatorVisibility(!indicatorsVisible)
     },
   ]
+
 
   return (
     <div className='h-full w-full'>
       <Carousel
         autoPlay={false}
         height={500}
-        navButtonsAlwaysVisible={true}
+        navButtonsAlwaysVisible={indicatorsVisible}
         animation="slide"
         duration={0}
         cycleNavigation={false}
@@ -43,10 +51,11 @@ function Assessment() {
         indicatorContainerProps={{
           style: {
             zIndex: 1,
-            marginTop: "10px",
+            marginTop: "0px",
             position: "relative"
           }
         }}
+        indicators={indicatorsVisible}
       >
         {
           items.map((item, i) => <AssessmentItem key={i} {...item} />)
@@ -58,7 +67,8 @@ function Assessment() {
 
 interface ItemProps {
   name: string,
-  path: string
+  path: string,
+  onClick: () => void
 }
 
 function AssessmentItem(props: ItemProps) {
@@ -68,6 +78,7 @@ function AssessmentItem(props: ItemProps) {
         alt={props.name}
         fill={true}
         objectFit='contain'
+        onClick={props.onClick}
       />
     </div>
   )

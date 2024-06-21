@@ -6,7 +6,9 @@ import { ClipboardDocumentIcon, Bars3BottomRightIcon, XMarkIcon } from '@heroico
 const Header = () => {
     const Links = [
         { name: 'HOME', link: '/' },
-        { name: 'CONTACT', link: '/contact' }
+        { name: 'CONTACT', link: '/contact' },
+        { name: 'DRAW', link: '/drawing' }
+
     ]
     const [open, setOpen] = useState(false)
 
