@@ -33,6 +33,26 @@ function Assessment() {
       path: "/cursive.png",
       onClick: () => setIndicatorVisibility(!indicatorsVisible)
     },
+    {
+      name: "Reading",
+      path: "/alphanumeric/K983HMR.png",
+      onClick: () => setIndicatorVisibility(!indicatorsVisible)
+    },
+    {
+      name: "Reading",
+      path: "/alphanumeric/S568BWY.png",
+      onClick: () => setIndicatorVisibility(!indicatorsVisible)
+    },
+    {
+      name: "Reading",
+      path: "/alphanumeric/E732ZSC.png",
+      onClick: () => setIndicatorVisibility(!indicatorsVisible)
+    },
+    {
+      name: "Reading",
+      path: "/alphanumeric/F479PRT.png",
+      onClick: () => setIndicatorVisibility(!indicatorsVisible)
+    }
   ]
 
 
