@@ -32,16 +32,16 @@ const Header = () => {
             <div className='shadow-md w-full fixed top-0 left-0'>
                 <div className='md:px-10 py-4 px-7 md:flex justify-between items-center bg-white md:px-10 px-7'
                 >
-                    <div className='font-bold text-2xl cursor-pointer flex items-center gap-1'>
+                    <div className='font-bold md:text-2xl text-lg cursor-pointer flex items-center gap-1 pr-5'>
                         <ClipboardDocumentIcon className='h-7 w-7 color-neutral-600' />
                         <span className='font-bold'> Rapid Screening Battery for Eye Clinics </span>
                     </div>
                     {/* Menu icon*/}
-                    <div onClick={() => setOpen(!open)} className='absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7'>
+                    <div onClick={() => setOpen(!open)} className='absolute right-8 top-7 cursor-pointer md:hidden w-7 h-7'>
                         {open ? <XMarkIcon /> : <Bars3BottomRightIcon />}
                     </div>
 
-                    <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-12' : 'top-[-490px]'}`}>
+                    <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20' : 'top-[-490px]'}`}>
                         {
                             Links.map((link, index) => {
                                 return (
