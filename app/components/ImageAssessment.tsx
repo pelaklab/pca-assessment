@@ -58,7 +58,7 @@ function Assessment() {
 
   return (
     <div className='h-full w-full'>
-      <Carousel
+      {/* <Carousel
         autoPlay={false}
         height={500}
         navButtonsAlwaysVisible={indicatorsVisible}
@@ -80,7 +80,7 @@ function Assessment() {
         {
           items.map((item, i) => <AssessmentItem key={i} {...item} />)
         }
-      </Carousel>
+      </Carousel> */}
     </div >
   )
 }

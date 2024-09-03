@@ -2,19 +2,30 @@
 
 import React, { useState } from 'react';
 import { ClipboardDocumentIcon, Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/16/solid';
+import { assessments } from '../constants';
+import { useAtom } from 'jotai';
+import { headerVisible } from '../atoms/experimentAtoms';
+
+
 
 const Header = () => {
     const Links = [
-        { name: 'HOME', link: '/' },
-        { name: 'CONTACT', link: '/contact' },
-        { name: 'DRAW', link: '/drawing' }
-
+        { name: 'HOME', link: '/', submenu: [] },
+        { name: 'CONTACT', link: '/contact', submenu: [] },
+        { name: 'TESTS', link: '/all', submenu: assessments }
     ]
     const [open, setOpen] = useState(false)
+    const [submenuOpen, setSubmenuOpen] = useState<number | null>(null)
 
-    const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+    const [isHeaderVisible, setIsHeaderVisible] = useAtom(headerVisible);
     const toggleHeader = () => {
         setIsHeaderVisible(!isHeaderVisible);
+    };
+    const handleSubmenuToggle = (index: number, hasSubmenu: boolean, event: React.MouseEvent) => {
+        if (hasSubmenu) {
+            event.preventDefault(); // Prevent navigation for submenu items
+            setSubmenuOpen(submenuOpen === index ? null : index);
+        }
     };
 
     if (!isHeaderVisible) return (
@@ -29,7 +40,7 @@ const Header = () => {
 
     return (
         isHeaderVisible && (
-            <div className='shadow-md w-full fixed top-0 left-0'>
+            <div className='shadow-md w-full fixed top-0 left-0 z-10'> {/* Setting z-index for mobile view */}
                 <div className='md:px-10 py-4 px-7 md:flex justify-between items-center bg-white md:px-10 px-7'
                 >
                     <div className='font-bold md:text-2xl text-lg cursor-pointer flex items-center gap-1 pr-5'>
@@ -45,8 +56,24 @@ const Header = () => {
                         {
                             Links.map((link, index) => {
                                 return (
-                                    <li className='font-semibold my-7 md:my-0 md:ml-8' key={index}>
-                                        <a href={link.link}>{link.name}</a>
+                                    <li className='relative font-semibold my-7 md:my-0 md:ml-8' key={index}>
+                                        <a href={link.link} onClick={(event) => handleSubmenuToggle(index, link.submenu.length > 0, event)}>{link.name}
+
+                                            {link.submenu.length > 0 && (
+                                                <span className='ml-2 text-gray-600'>&#9662;</span>
+                                            )}
+                                        </a>
+                                        {/* Submenu */}
+                                        {link.submenu.length > 0 && submenuOpen === index && (
+                                            <ul className='absolute left-0 mt-2 bg-white shadow-lg rounded-md'>
+                                                {link.submenu.map((item, subIndex) => (
+                                                    <li key={subIndex} className='py-2 px-4 hover:bg-gray-100'>
+                                                        <a href={item.path.toLowerCase()}>{item.name}</a>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
+
                                     </li>
                                 )
                             })
