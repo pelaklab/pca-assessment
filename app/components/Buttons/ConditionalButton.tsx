@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 
 interface ConditionalButtonProps {
@@ -11,13 +12,10 @@ const ConditionalButton = (props: ConditionalButtonProps) => {
   const { onClick, className, buttonText } = props;
   // Get the current location object which contains the URL
   const ASSESSMENT_PATH = '/assessments';
-  if (!(typeof window === 'undefined')) {
-    const currentPath = window.location.pathname;
-    if (!currentPath.includes(ASSESSMENT_PATH) || currentPath.includes('all')) {
-      return null;
-    }
+  const currentPath = window.location.pathname;
+  if (!currentPath.includes(ASSESSMENT_PATH) || currentPath.includes('all')) {
+    return null;
   }
-
 
   return (
     <button className={className} onClick={onClick}>
