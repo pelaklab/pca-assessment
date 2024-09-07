@@ -4,7 +4,7 @@ import { headerVisible } from '@/app/atoms/experimentAtoms';
 import { useAtomValue } from 'jotai';
 
 
-const NavonImages = () => {
+const NavonImages: React.FC = () => {
     const images = [
         '/navon-figure-1.png',
         '/navon-figure-2.png',
@@ -16,7 +16,7 @@ const NavonImages = () => {
 
     useEffect(() => {
         setIndicatorVisibility(isHeaderVisible)
-    }, [indicatorsVisible])
+    }, [isHeaderVisible])
 
     // Handler to show the next image
     const handleNextImage = () => {

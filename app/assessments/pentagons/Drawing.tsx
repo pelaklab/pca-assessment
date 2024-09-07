@@ -8,7 +8,7 @@ const styles = {
 };
 
 
-const Canvas = () => {
+const PentagonCanvas: React.FC = () => {
     const canvas = React.useRef<ReactSketchCanvasRef>(null);
 
     const getFileName = () => {
@@ -60,4 +60,4 @@ const Canvas = () => {
     </div>
 };
 
-export default Canvas;
+export { PentagonCanvas }

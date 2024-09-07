@@ -9,5 +9,5 @@ export const assessments: Link[] = [
     { 'name': 'Navon Figures', 'path': '/assessments/navon' },
     { 'name': 'Reading', 'path': '/assessments/reading' },
     { 'name': 'CORVIST Crowding', 'path': '/assessments/crowding' },
-    { 'name': 'Pentagons', 'path': '/drawing' },
+    { 'name': 'Pentagons', 'path': '/assessments/pentagons' },
 ]

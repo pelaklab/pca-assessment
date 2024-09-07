@@ -4,7 +4,7 @@ import { headerVisible } from '@/app/atoms/experimentAtoms';
 import { useAtomValue } from 'jotai';
 
 
-const LetterCrowdingAssessment = () => {
+const LetterCrowdingAssessment: React.FC = () => {
     const images = [
         '/alphanumeric/E732ZSC.png',
         '/alphanumeric/F479PRT.png',

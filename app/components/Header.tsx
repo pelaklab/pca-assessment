@@ -5,6 +5,8 @@ import { ClipboardDocumentIcon, Bars3BottomRightIcon, XMarkIcon } from '@heroico
 import { assessments } from '../constants';
 import { useAtom } from 'jotai';
 import { headerVisible } from '../atoms/experimentAtoms';
+import { enterFullscreen, exitFullscreen } from '../interaction';
+import ConditionalButton from './Buttons/ConditionalButton';
 
 
 
@@ -12,6 +14,7 @@ const Header = () => {
     const Links = [
         { name: 'HOME', link: '/', submenu: [] },
         { name: 'CONTACT', link: '/contact', submenu: [] },
+        { name: 'INSTRUCTIONS', link: '/instructions', submenu: [] },
         { name: 'TESTS', link: '/all', submenu: assessments }
     ]
     const [open, setOpen] = useState(false)
@@ -19,6 +22,11 @@ const Header = () => {
 
     const [isHeaderVisible, setIsHeaderVisible] = useAtom(headerVisible);
     const toggleHeader = () => {
+        if (isHeaderVisible) {
+            enterFullscreen();
+        } else {
+            exitFullscreen();
+        }
         setIsHeaderVisible(!isHeaderVisible);
     };
     const handleSubmenuToggle = (index: number, hasSubmenu: boolean, event: React.MouseEvent) => {
@@ -78,9 +86,9 @@ const Header = () => {
                                 )
                             })
                         }
-                        <button className='btn bg-neutral-700 text-white px-3 py-1 md:ml-8 rounded md-static' onClick={toggleHeader}>
-                            START
-                        </button>
+                        <ConditionalButton className='btn bg-neutral-700 text-white px-3 py-1 md:ml-8 rounded md-static'
+                            buttonText='START'
+                            onClick={toggleHeader} />
                     </ul>
                 </div>
 

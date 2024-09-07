@@ -4,7 +4,7 @@ import { headerVisible } from '@/app/atoms/experimentAtoms';
 import { useAtomValue } from 'jotai';
 
 
-const ParagraphImages = () => {
+const ParagraphImages: React.FC = () => {
     // Array of image sources
     const images = [
         '/non-cursive.png',
