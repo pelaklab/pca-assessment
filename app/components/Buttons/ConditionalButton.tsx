@@ -10,11 +10,15 @@ interface ConditionalButtonProps {
 const ConditionalButton = (props: ConditionalButtonProps) => {
   const { onClick, className, buttonText } = props;
   // Get the current location object which contains the URL
-  const currentPath = window.location.pathname;
   const ASSESSMENT_PATH = '/assessments';
-  if (!currentPath.includes(ASSESSMENT_PATH) || currentPath.includes('all')) {
-    return null;
+  if (!(typeof window === 'undefined')) {
+    const currentPath = window.location.pathname;
+    if (!currentPath.includes(ASSESSMENT_PATH) || currentPath.includes('all')) {
+      return null;
+    }
   }
+
+
   return (
     <button className={className} onClick={onClick}>
       {buttonText}
