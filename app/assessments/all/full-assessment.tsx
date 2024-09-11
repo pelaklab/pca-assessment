@@ -28,18 +28,17 @@ const AllAssessments = () => {
             component: NavonImages
         },
         {
+            title: "Pentagon Drawing",
+            component: PentagonCanvas,
+        },
+        {
             title: "Reading",
             component: ParagraphImages,
         },
         {
             title: "CORVIST Crowding",
             component: LetterCrowdingAssessment,
-        },
-        {
-            title: "Pentagon Drawing",
-            component: PentagonCanvas,
         }
-
     ]
 
     const setIsHeaderVisible = useSetAtom(headerVisible);
