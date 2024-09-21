@@ -4,8 +4,8 @@ const InstructionsPage: React.FC = () => {
     return (
         <main className="flex h-full flex-col items-start justify-between p-24 w-3/5">
             <h1 className="my-4 text-lg text-gray-500">Instructions</h1>
-            <p>Welcome to the instructions page!</p>
-            <p>Here you can provide detailed instructions for your users.</p>
+            <p className="text-pink-pony-club">This page is under construction.
+                Please check back later for more details 🩷</p>
 
             <h3 className="my-4 text-base text-gray-500">Calibration</h3>
             <p className="my-1">To calibrate the test, you need to measure the length of the line on 
