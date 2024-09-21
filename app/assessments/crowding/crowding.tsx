@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/16/solid';
 import { headerVisible } from '@/app/atoms/experimentAtoms';
 import { useAtomValue } from 'jotai';
+import Image from 'next/image';
 
 
 const LetterCrowdingAssessment: React.FC = () => {
@@ -33,12 +34,17 @@ const LetterCrowdingAssessment: React.FC = () => {
     return (
         <div className="flex flex-col items-center">
             {/* Container for the image and arrows */}
-            <div className="relative">
+            {/* NOTE: Do not change these breakpoints -- they are fixed for the viewing distance */}
+            <div className="w-[300px] sm:w-[350px] lg:w-[500px] xl:w-[1000px]">
                 {/* Display the current image */}
-                <img
+                <Image
                     src={images[currentIndex]}
                     alt={`Image ${currentIndex + 1}`}
-                    className="w-full max-w-lg transition-all duration-500 ease-in-out"
+                    layout={"intrisic"}
+                    width={1000}
+                    height={200}
+                    quality={100}
+                    className="transition-all duration-500 ease-in-out"
                     onClick={() => setIndicatorVisibility(!indicatorsVisible)}
                 />
             </div>

@@ -51,7 +51,7 @@ const Header = () => {
             <div className='shadow-md w-full fixed top-0 left-0 z-10'> {/* Setting z-index for mobile view */}
                 <div className='md:px-10 py-4 px-7 md:flex justify-between items-center bg-white md:px-10 px-7'
                 >
-                    <div className='font-bold md:text-2xl text-lg cursor-pointer flex items-center gap-1 pr-5'>
+                    <div className='font-bold lg:text-2xl text-lg cursor-pointer flex items-center gap-1 pr-5'>
                         <ClipboardDocumentIcon className='h-7 w-7 color-neutral-600' />
                         <span className='font-bold'> Rapid Screening Battery for Eye Clinics </span>
                     </div>
