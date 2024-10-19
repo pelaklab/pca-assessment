@@ -18,7 +18,7 @@ const questions = [
   "Are you having any problems knowing left from right?",
 ];
 
-const Questionnaire: React.FC  = () => {
+const Questionnaire: React.FC = () => {
   const [answers, setAnswers] = useState<number[]>(Array(questions.length).fill(null));
   const [score, setScore] = useState<number | null>(null); // To store the total score after submission
 
@@ -44,16 +44,16 @@ const Questionnaire: React.FC  = () => {
   ]
 
   return (
-    <div className="container mx-auto p-6 max-w-3xl bg-white rounded-lg shadow-lg">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 max-w-full sm:max-w-3xl bg-white rounded-lg shadow-lg">
       <h1 className="text-3xl font-bold mb-8 text-center text-gray-800">Colorado Posterior Cortical Questionnaire</h1>
 
       <form onSubmit={handleSubmit} className="space-y-8">
         {questions.map((question, index) => (
-          <fieldset key={index} className="border p-5 rounded-lg shadow-sm">
+          <fieldset key={index} className="border p-4 rounded-lg shadow-sm">
             <legend id={`question-${index}-label`} className="text-l font-medium mb-3 text-gray-800">
               {index + 1}. {question}
             </legend>
-            <div className="grid grid-cols-5 gap-4 mt-3">
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 mt-3">
               {scoringSystem.map(({ score, label }) => (
                 <label key={score} className="flex flex-col items-center text-center">
                   <input
@@ -65,7 +65,7 @@ const Questionnaire: React.FC  = () => {
                     className="h-6 w-6 text-indigo-600 focus:ring-indigo-500 focus:ring-2 rounded-full border-gray-300"
                     aria-labelledby={`question-${index}-label`}
                   />
-                  <span className="mt-2 text-sm font-medium text-gray-700">{label}</span>
+                  <span className="mt-2 text-xs sm:text-sm font-medium text-gray-700">{label}</span>
                 </label>
               ))}
             </div>
@@ -85,8 +85,9 @@ const Questionnaire: React.FC  = () => {
           <h2 className="text-2xl font-semibold">Your Total Score: {score}</h2>
         </div>
       )}
-    </div >
+    </div>
   );
+
 };
 
 export { Questionnaire as CpcQuestionnaire }
