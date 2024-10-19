@@ -13,9 +13,9 @@ import ConditionalButton from './Buttons/ConditionalButton';
 const Header = () => {
     const Links = [
         { name: 'HOME', link: '/', submenu: [] },
-        { name: 'CONTACT', link: '/contact', submenu: [] },
         { name: 'INSTRUCTIONS', link: '/instructions', submenu: [] },
-        { name: 'TESTS', link: '/all', submenu: assessments }
+        { name: 'TESTS', link: '/all', submenu: assessments },
+        { name: 'CONTACT', link: '/contact', submenu: [] },
     ]
     const [open, setOpen] = useState(false)
     const [submenuOpen, setSubmenuOpen] = useState<number | null>(null)
@@ -73,7 +73,7 @@ const Header = () => {
                                         </a>
                                         {/* Submenu */}
                                         {link.submenu.length > 0 && submenuOpen === index && (
-                                            <ul className='absolute left-0 mt-2 bg-white shadow-lg rounded-md'>
+                                            <ul className='absolute left-0 mt-2 mr-2 bg-white shadow-lg rounded-md'>
                                                 {link.submenu.map((item, subIndex) => (
                                                     <li key={subIndex} className='py-2 px-4 hover:bg-gray-100'>
                                                         <a href={item.path.toLowerCase()}>{item.name}</a>

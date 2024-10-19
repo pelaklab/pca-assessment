@@ -3,9 +3,21 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/16/solid';
 import { headerVisible } from '@/app/atoms/experimentAtoms';
 import { useAtomValue } from 'jotai';
 import Image from 'next/image';
+import localFont from 'next/font/local'
+
+const sloanFont = localFont({
+    src: '../fonts/Sloan.211028-1955.woff2',
+    variable: '--font-inter',
+})
+
+const pelliFont = localFont({
+    src: '../fonts/Pelli.woff2',
+    variable: '--font-mono',
+})
 
 
 const LetterCrowdingAssessment: React.FC = () => {
+
     const images = [
         '/alphanumeric/E732ZSC.png',
         '/alphanumeric/F479PRT.png',
@@ -47,6 +59,17 @@ const LetterCrowdingAssessment: React.FC = () => {
                     className="transition-all duration-500 ease-in-out"
                     onClick={() => setIndicatorVisibility(!indicatorsVisible)}
                 />
+            </div>
+            {/* Using the right font */}
+            <div>
+                <p className='text-2xl'>
+
+                    <span className={`${sloanFont.className} ${sloanFont.variable}`}>E</span>
+                    <span className={`${pelliFont.className} ${pelliFont.variable} tracking-widest`}>732</span>
+                    <span className={`${sloanFont.className} ${sloanFont.variable} tracking-widest`}>
+                        ZSC
+                    </span>
+                </p>
             </div>
 
             {/* Previous Arrow Button */}

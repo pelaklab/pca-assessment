@@ -16,6 +16,11 @@ const config: Config = {
       colors: {
         "pink-pony-club": '#FF66B2',
       },
+      // Custom fonts are used for the vision testing, and Crowding
+      fontFamily: {
+        sans: ['var(--font-inter)'],
+        mono: ['var(--font-mono)'],
+      }
     },
   },
   plugins: [],

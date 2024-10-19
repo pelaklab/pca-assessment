@@ -6,6 +6,7 @@ import { headerVisible } from "@/app/atoms/experimentAtoms";
 import { ParagraphImages } from "../reading/reading";
 import { LetterCrowdingAssessment } from "../crowding/crowding";
 import { PentagonCanvas } from "../pentagons/Drawing";
+import { CpcQuestionnaire } from "../questionnaire/coloradoVision";
 
 
 // assessment item with header
@@ -38,6 +39,10 @@ const AllAssessments = () => {
         {
             title: "CORVIST Crowding",
             component: LetterCrowdingAssessment,
+        },
+        {
+            title: "CPC Questionnaire",
+            component: CpcQuestionnaire,
         }
     ]
 
