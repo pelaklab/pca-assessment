@@ -44,7 +44,7 @@ const Questionnaire: React.FC = () => {
   ]
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 max-w-full sm:max-w-3xl bg-white rounded-lg shadow-lg">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 max-w-full sm:max-w-3xl bg-white rounded-lg">
       <h1 className="text-3xl font-bold mb-8 text-center text-gray-800">Colorado Posterior Cortical Questionnaire</h1>
 
       <form onSubmit={handleSubmit} className="space-y-8">
@@ -74,9 +74,9 @@ const Questionnaire: React.FC = () => {
 
         <button
           type="submit"
-          className="w-full bg-indigo-600 text-white py-3 px-5 rounded-lg hover:bg-indigo-700 transition font-semibold text-lg"
+          className="bg-gray-400 text-white py-3 px-5 rounded-lg hover:bg-indigo-700 transition font-semibold text-lg"
         >
-          Submit
+          Calculate Score
         </button>
       </form>
 

@@ -98,8 +98,13 @@ const AllAssessments = () => {
             {assessmentState === 'active' &&
                 <>
                     <CurrentAssessment />
-                    <button className='btn border-2 border-solid border-gray-200 text-gray-500 px-3 py-1 absolute rounded bottom-10'
+                    {
+                        currentTitle !== 'CPC Questionnaire' ?
+                        <button className='btn border-2 border-solid border-gray-200 text-gray-500 px-3 py-1 absolute rounded bottom-10'
+                        onClick={handleExit}>Finish Test</button> :
+                        <button className='btn border-2 border-solid border-gray-200 text-gray-500 px-3 py-1'
                         onClick={handleExit}>Finish Test</button>
+                    }
                 </>
             }
             {assessmentState === 'finished' &&
