@@ -10,12 +10,6 @@ const sloanFont = localFont({
     variable: '--font-inter',
 })
 
-const pelliFont = localFont({
-    src: '../fonts/Pelli.woff2',
-    variable: '--font-mono',
-})
-
-
 const LetterCrowdingAssessment: React.FC = () => {
 
     const images = [
@@ -43,6 +37,14 @@ const LetterCrowdingAssessment: React.FC = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
     };
 
+    const imageLetters = images.map(x => {
+        const match = x.match(/[A-Za]+/g)
+        if (match) {
+            return match
+        } return ""
+    }
+    )
+
     return (
         <div className="flex flex-col items-center">
             {/* Container for the image and arrows */}
@@ -61,13 +63,11 @@ const LetterCrowdingAssessment: React.FC = () => {
                 />
             </div>
             {/* Using the right font */}
-            <div>
+            <div className="mt-10 border-pink-pony-club border-dashed border-2">
+                <p> [DRAFT] Example of Sloan font: </p>
                 <p className='text-2xl'>
-
-                    <span className={`${sloanFont.className} ${sloanFont.variable}`}>E</span>
-                    <span className={`${pelliFont.className} ${pelliFont.variable} tracking-widest`}>732</span>
                     <span className={`${sloanFont.className} ${sloanFont.variable} tracking-widest`}>
-                        ZSC
+                        {imageLetters[currentIndex]}
                     </span>
                 </p>
             </div>

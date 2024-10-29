@@ -18,8 +18,8 @@ const config: Config = {
       },
       // Custom fonts are used for the vision testing, and Crowding
       fontFamily: {
-        sans: ['var(--font-inter)'],
-        mono: ['var(--font-mono)'],
+        sans: ['ui-sans-serif', 'system-ui'],
+        mono: [ 'var(--font-inter)'],
       }
     },
   },
