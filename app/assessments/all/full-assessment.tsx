@@ -6,6 +6,7 @@ import { headerVisible } from "@/app/atoms/experimentAtoms";
 import { ParagraphImages } from "../reading/reading";
 import { LetterCrowdingAssessment } from "../crowding/crowding";
 import { PentagonCanvas } from "../pentagons/Drawing";
+import { CpcQuestionnaire } from "../questionnaire/coloradoVision";
 
 
 // assessment item with header
@@ -38,6 +39,10 @@ const AllAssessments = () => {
         {
             title: "CORVIST Crowding",
             component: LetterCrowdingAssessment,
+        },
+        {
+            title: "CPC Questionnaire",
+            component: CpcQuestionnaire,
         }
     ]
 
@@ -93,8 +98,13 @@ const AllAssessments = () => {
             {assessmentState === 'active' &&
                 <>
                     <CurrentAssessment />
-                    <button className='btn border-2 border-solid border-gray-200 text-gray-500 px-3 py-1 absolute rounded bottom-10'
+                    {
+                        currentTitle !== 'CPC Questionnaire' ?
+                        <button className='btn border-2 border-solid border-gray-200 text-gray-500 px-3 py-1 absolute rounded bottom-10'
+                        onClick={handleExit}>Finish Test</button> :
+                        <button className='btn border-2 border-solid border-gray-200 text-gray-500 px-3 py-1'
                         onClick={handleExit}>Finish Test</button>
+                    }
                 </>
             }
             {assessmentState === 'finished' &&

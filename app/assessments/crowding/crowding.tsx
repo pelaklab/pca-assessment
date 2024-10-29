@@ -3,9 +3,15 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/16/solid';
 import { headerVisible } from '@/app/atoms/experimentAtoms';
 import { useAtomValue } from 'jotai';
 import Image from 'next/image';
+import localFont from 'next/font/local'
 
+const sloanFont = localFont({
+    src: '../fonts/Sloan.211028-1955.woff2',
+    variable: '--font-inter',
+})
 
 const LetterCrowdingAssessment: React.FC = () => {
+
     const images = [
         '/alphanumeric/E732ZSC.png',
         '/alphanumeric/F479PRT.png',
@@ -31,6 +37,14 @@ const LetterCrowdingAssessment: React.FC = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
     };
 
+    const imageLetters = images.map(x => {
+        const match = x.match(/[A-Za]+/g)
+        if (match) {
+            return match
+        } return ""
+    }
+    )
+
     return (
         <div className="flex flex-col items-center">
             {/* Container for the image and arrows */}
@@ -47,6 +61,15 @@ const LetterCrowdingAssessment: React.FC = () => {
                     className="transition-all duration-500 ease-in-out"
                     onClick={() => setIndicatorVisibility(!indicatorsVisible)}
                 />
+            </div>
+            {/* Using the right font */}
+            <div className="mt-10 border-pink-pony-club border-dashed border-2">
+                <p> [DRAFT] Example of Sloan font: </p>
+                <p className='text-2xl'>
+                    <span className={`${sloanFont.className} ${sloanFont.variable} tracking-widest`}>
+                        {imageLetters[currentIndex]}
+                    </span>
+                </p>
             </div>
 
             {/* Previous Arrow Button */}
