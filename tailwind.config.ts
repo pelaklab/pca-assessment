@@ -20,6 +20,7 @@ const config: Config = {
       fontFamily: {
         sans: ['ui-sans-serif', 'system-ui'],
         mono: [ 'var(--font-inter)'],
+        helvetica: ['helvetica'],
       }
     },
   },

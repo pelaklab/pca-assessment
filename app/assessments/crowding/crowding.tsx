@@ -14,9 +14,9 @@ const LetterCrowdingAssessment: React.FC = () => {
 
     const images = [
         '/alphanumeric/E732ZSC.png',
-        '/alphanumeric/F479PRT.png',
-        '/alphanumeric/K983HMR.png',
-        '/alphanumeric/S568BWY.png',
+        // '/alphanumeric/F479PRT.png',
+        // '/alphanumeric/K983HMR.png',
+        // '/alphanumeric/S568BWY.png',
     ]
     // State to track the current image index
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -49,25 +49,19 @@ const LetterCrowdingAssessment: React.FC = () => {
         <div className="flex flex-col items-center">
             {/* Container for the image and arrows */}
             {/* NOTE: Do not change these breakpoints -- they are fixed for the viewing distance */}
-            <div className="w-[300px] sm:w-[350px] lg:w-[500px] xl:w-[1000px]">
-                {/* Display the current image */}
-                <Image
-                    src={images[currentIndex]}
-                    alt={`Image ${currentIndex + 1}`}
-                    layout={"intrisic"}
-                    width={1000}
-                    height={200}
-                    quality={100}
-                    className="transition-all duration-500 ease-in-out"
-                    onClick={() => setIndicatorVisibility(!indicatorsVisible)}
-                />
-            </div>
+
             {/* Using the right font */}
-            <div className="mt-10 border-pink-pony-club border-dashed border-2">
+            <div className="mt-10 ">
                 <p> [DRAFT] Example of Sloan font: </p>
                 <p className='text-2xl'>
                     <span className={`${sloanFont.className} ${sloanFont.variable} tracking-widest`}>
-                        {imageLetters[currentIndex]}
+                      E
+                    </span>
+                    <span className={`font-helvetica text-[34px] tracking-widest font-bold`}>
+                      732
+                    </span>
+                    <span className={`${sloanFont.className} ${sloanFont.variable} tracking-widest`}>
+                      ZSC
                     </span>
                 </p>
             </div>
