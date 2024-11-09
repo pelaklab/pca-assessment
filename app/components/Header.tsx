@@ -48,7 +48,7 @@ const Header = () => {
 
     return (
         isHeaderVisible && (
-            <div className='shadow-md w-full fixed top-0 left-0 z-10'> {/* Setting z-index for mobile view */}
+            <div className='shadow-md w-full fixed top-0 left-0 z-10 bg-white'> {/* Setting z-index for mobile view */}
                 <div className='md:px-10 py-4 px-7 md:flex justify-between items-center bg-whit'
                 >
                     <div className='font-bold lg:text-2xl text-lg cursor-pointer flex items-center gap-1 pr-3'>

@@ -7,29 +7,31 @@ import { ParagraphImages } from "../reading/reading";
 import { LetterCrowdingAssessment } from "../crowding/crowding";
 import { PentagonCanvas } from "../pentagons/Drawing";
 import { CpcQuestionnaire } from "../questionnaire/coloradoVision";
+import { CrowdingTestInstructions } from "../crowding/crowdingInstructions";
 
 
 // assessment item with header
 interface AsssementItem {
     title: string;
     component: React.FC;
+    additionalInstructions?: React.FC;
 }
 
 const buttonStyle = 'btn bg-neutral-700 text-white px-3 py-1 rounded md-static'
-type AssessmentState = 'not-started' | 'active' | 'finished';
+type AssessmentState = 'not-started' | 'instructions' | 'active' | 'finished';
 
 const AllAssessments = () => {
     const AssessmentItems: AsssementItem[] = [
         {
-            title: "Poppelreuter-Ghent Figures",
-            component: PoppelreuterGhent
+            title: "Poppelreuter-Ghent Overlapping Figures",
+            component: PoppelreuterGhent,
         },
         {
             title: "Navon Figures",
             component: NavonImages
         },
         {
-            title: "Pentagon Drawing",
+            title: "Intersecting Pentagons Copy",
             component: PentagonCanvas,
         },
         {
@@ -37,8 +39,9 @@ const AllAssessments = () => {
             component: ParagraphImages,
         },
         {
-            title: "CORVIST Crowding",
+            title: "Crowding",
             component: LetterCrowdingAssessment,
+            additionalInstructions: CrowdingTestInstructions,
         },
         {
             title: "CPC Questionnaire",
@@ -64,6 +67,10 @@ const AllAssessments = () => {
         setAssessmentState('active');
     };
 
+    const handleViewInstructions = () => {
+        setAssessmentState('instructions');
+    }
+
     const handleExit = () => {
         setEndTime(Date.now());
         setAssessmentState('finished');
@@ -86,13 +93,25 @@ const AllAssessments = () => {
     };
 
     const currentTitle = AssessmentItems[currentAssessmentIndex].title;
+    const AdditionalInstructions = AssessmentItems[currentAssessmentIndex].additionalInstructions;
 
     return (
         <>
             {assessmentState === 'not-started' &&
                 <>
                     {TestDescription(currentTitle)}
-                    <button className={buttonStyle} onClick={handleStart}>Start Test</button>
+                    <button className={buttonStyle} onClick={
+                        AdditionalInstructions ? handleViewInstructions :
+                            handleStart}>
+
+                        Start Test</button>
+                </>
+            }
+            {
+                assessmentState === 'instructions' &&
+                <>
+                    {AdditionalInstructions && <AdditionalInstructions />}
+                    <button className={buttonStyle} onClick={handleStart}>Continue</button>
                 </>
             }
             {assessmentState === 'active' &&
@@ -100,10 +119,10 @@ const AllAssessments = () => {
                     <CurrentAssessment />
                     {
                         currentTitle !== 'CPC Questionnaire' ?
-                        <button className='btn border-2 border-solid border-gray-200 text-gray-500 px-3 py-1 absolute rounded bottom-10'
-                        onClick={handleExit}>Finish Test</button> :
-                        <button className='btn border-2 border-solid border-gray-200 text-gray-500 px-3 py-1'
-                        onClick={handleExit}>Finish Test</button>
+                            <button className='btn border-2 border-solid border-gray-200 text-gray-500 px-3 py-1 absolute rounded bottom-10'
+                                onClick={handleExit}>Finish Test</button> :
+                            <button className='btn border-2 border-solid border-gray-200 text-gray-500 px-3 py-1'
+                                onClick={handleExit}>Finish Test</button>
                     }
                 </>
             }

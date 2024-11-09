@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/16/solid';
 import { headerVisible } from '@/app/atoms/experimentAtoms';
 import { useAtomValue } from 'jotai';
-import Image from 'next/image';
 import localFont from 'next/font/local'
 
 const sloanFont = localFont({
