@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/16/solid';
 import { headerVisible } from '@/app/atoms/experimentAtoms';
 import { useAtomValue } from 'jotai';
+import Image from 'next/image';
 
 
 const ParagraphImages: React.FC = () => {
@@ -31,17 +32,17 @@ const ParagraphImages: React.FC = () => {
     };
 
     return (
-        <div className="flex flex-col items-center">
+        <div className="px-24">
             {/* Container for the image and arrows */}
-            <div className="relative">
-                {/* Display the current image */}
-                <img
-                    src={images[currentIndex]}
-                    alt={`Image ${currentIndex + 1}`}
-                    className="w-full max-w-lg transition-all duration-500 ease-in-out"
-                    onClick={() => setIndicatorVisibility(!indicatorsVisible)}
-                />
-            </div>
+            <Image
+                src={images[currentIndex]}
+                alt={`Image ${currentIndex + 1}`}
+                className="transition-all duration-500 ease-in-out"
+                onClick={() => setIndicatorVisibility(!indicatorsVisible)}
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, (max-width: 1024px) 70vw, 50vw"
+                width={800}
+                height={800}
+            />
 
             {/* Previous Arrow Button */}
             {currentIndex > 0 && indicatorsVisible && <button

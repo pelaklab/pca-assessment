@@ -19,8 +19,12 @@ const config: Config = {
       // Custom fonts are used for the vision testing, and Crowding
       fontFamily: {
         sans: ['ui-sans-serif', 'system-ui'],
-        mono: [ 'var(--font-inter)'],
+        mono: ['var(--font-inter)'],
         helvetica: ['helvetica'],
+      },
+      // Custom letter spacing for the crowding test
+      letterSpacing: {
+        widest: '0.125em',
       }
     },
   },
