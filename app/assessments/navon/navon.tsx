@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/16/solid';
 import { headerVisible } from '@/app/atoms/experimentAtoms';
 import { useAtomValue } from 'jotai';
+import Image from 'next/image'
 
 
 const NavonImages: React.FC = () => {
@@ -29,17 +30,21 @@ const NavonImages: React.FC = () => {
     };
 
     return (
-        <div className="flex flex-col items-center">
+        <div className="pt-40">
             {/* Container for the image and arrows */}
-            <div className="relative md:w-[500px] md:h-[500px]">
-                {/* Display the current image */}
-                <img
-                    src={images[currentIndex]}
-                    alt={`Image ${currentIndex + 1}`}
-                    className="w-full max-w-lg transition-all duration-500 ease-in-out"
-                    onClick={() => setIndicatorVisibility(!indicatorsVisible)}
-                />
-            </div>
+            {/* Display the current image */}
+            <Image
+                src={images[currentIndex]}
+                alt={`Image ${currentIndex + 1}`}
+                className="transition-all duration-500 ease-in-out"
+                onClick={() => setIndicatorVisibility(!indicatorsVisible)}
+                style={{
+                    width: '100%',
+                    height: 'auto',
+                }}
+                width={400}
+                height={300}
+            />
 
             {/* Previous Arrow Button */}
             {currentIndex > 0 && indicatorsVisible && <button
