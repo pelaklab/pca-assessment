@@ -24,6 +24,8 @@ export default function Contact() {
       <p>Katie Li - Web Contractor - <a href="mailto:katie.li@cuanschutz.org"
         className="font-medium text-blue-600 underline dark:text-blue-500 hover:no-underline"
       > email </a></p>
+      <p>Jessica St. Onge - Designer and UX researcher -
+        <a href="https://www.jkstonge.com/">Web </a></p>
     </main>
   );
 

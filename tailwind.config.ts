@@ -15,10 +15,15 @@ const config: Config = {
       },
       colors: {
         "pink-pony-club": '#FF66B2',
+        "ivory": "#F2E9E1",
+        "indigo": "#2D2A40",
+        "forget-me-not-purple": "#7B7CBE",
+        "periwinkle": "#B3C9F5",
+        "sunny": "#FDBF49"
       },
       // Custom fonts are used for the vision testing, and Crowding
       fontFamily: {
-        sans: ['ui-sans-serif', 'system-ui'],
+        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
         mono: ['var(--font-inter)'],
         helvetica: ['helvetica'],
       },
