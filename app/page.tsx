@@ -118,7 +118,7 @@ export default function Home() {
 
           <div className="space-y-10 text-ivory bg-indigo px-[10%] text-xl py-20">
             <Image src="/icons/clipboard.svg" alt="" width={86} height={112} className="mb-10" />
-            <h2 className="text-4xl font-medium">Interpretation</h2>
+            <h2 className="text-4xl font-medium">Interpretation of Results</h2>
 
             <p>
               If the patient has evidence of a homonymous visual field defect without an imaging
