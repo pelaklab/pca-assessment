@@ -15,10 +15,10 @@ export default function Instructions({ assessmentName,
     handleStart,
     buttonText = "Start Test" }: InstructionsProps) {
     return (
-        <main className="bg-ivory text-xl h-[calc(100vh-128px)]">
-            <div className="px-[10%] lg:pr-[32] pb-30 py-10 space-y-8">
+        <main className="bg-ivory text-xl md:h-[calc(100vh-128px)] h-screen">
+            <div className="px-[10%] lg:pr-[32] pb-30 py-10 space-y-8 bg-ivory">
                 <Image src={iconPath} alt="" width={122} height={67} className="mb-10" />
-                <h1 className="text-6xl font-medium text-left">
+                <h1 className="md:text-6xl text-2xl font-medium text-left">
                     {assessmentName}
                 </h1>
                 <p>{instructionsText}</p>
