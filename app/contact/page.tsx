@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <main className="h-screen w-full bg-ivory">
       <div className="px-[20%] py-10 space-y-6">
-        <Image src="/icons/team.svg" alt="" width={93} height={93}/>
+        <Image src="/icons/team.svg" alt="" width={93} height={93} />
         <h1 className="text-6xl font-medium text-left">About Us</h1>
         <p>Our website functions as an <span className="font-semibold">
           initial clinical screening tool</span> to assess the
@@ -28,12 +28,21 @@ export default function Contact() {
       <div className="px-[20%] space-y-6">
         <h1 className="text-6xl font-medium text-left">Contact Information</h1>
         <div>
-        <p>Lily Notebloom - Neurology Clinical Research Assistant</p>
-        <p>Katie Li - Web Contractor </p>
-        <p>Jessica St. Onge - Designer and UX researcher |
-          <a href="https://www.jkstonge.com/"
-            className="text-forget-me-not-purple"
-          > website </a></p>
+          <p>Lily Noteboom - Neurology Clinical Research Assistant |
+            <a href="mailto:lily.noteboom@cuanschutz.edu"
+              className="text-forget-me-not-purple"
+
+            > email</a>
+          </p>
+          <p>Katie Li - Web Contractor |
+            <a href="mailto:katie.li@cuanschutz.edu"
+              className="text-forget-me-not-purple"
+            > email </a>
+          </p>
+          <p>Jessica St. Onge - Designer and UX researcher |
+            <a href="https://www.jkstonge.com/"
+              className="text-forget-me-not-purple"
+            > website </a></p>
         </div>
       </div>
     </main>
