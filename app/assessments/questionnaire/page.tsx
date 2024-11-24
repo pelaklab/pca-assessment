@@ -54,7 +54,7 @@ export default function ColoradoPostCorticalQuestionnaire() {
                         <DisplayFigures />
                         <div className="fixed bottom-4 right-4">
                             <button className='btn border-4 border-solid border-gray-200 text-gray-500 px-3 py-1 rounded-xl hover:border-sunny \
-                            hover:border-4 hover:text-black'
+                            hover:border-4 hover:text-black bg-white'
                                 onClick={handleExit}>Finish Test</button>
                         </div>
                     </main>

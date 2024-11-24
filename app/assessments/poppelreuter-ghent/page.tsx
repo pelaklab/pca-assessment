@@ -14,6 +14,7 @@ export default function PoppelreuterPage() {
     const [endTime, setEndTime] = React.useState<number>(0);
     const setIsHeaderVisible = useSetAtom(headerVisible);
 
+
     const handleStart = () => {
         setStartTime(Date.now());
         setIsHeaderVisible(false);
@@ -62,6 +63,8 @@ export default function PoppelreuterPage() {
                     assessmentName={assessmentName}
                     startTime={startTime}
                     endTime={endTime}
+                    nextUrl="/assessments/navon"
+                    hasNext
                 />
             }
         </>

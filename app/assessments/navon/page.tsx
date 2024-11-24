@@ -62,6 +62,8 @@ export default function NavonPage() {
                     assessmentName={assessmentName}
                     startTime={startTime}
                     endTime={endTime}
+                    nextUrl="/assessments/pentagons"
+                    hasNext
                 />
             }
         </>

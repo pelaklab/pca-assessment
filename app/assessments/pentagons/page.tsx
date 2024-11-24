@@ -67,6 +67,8 @@ export default function Drawing() {
                     assessmentName={assessmentName}
                     startTime={startTime}
                     endTime={endTime}
+                    nextUrl="/assessments/reading"
+                    hasNext
                 />
             }
         </>

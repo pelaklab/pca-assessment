@@ -31,7 +31,7 @@ export default function CorvistCrowding() {
         setIsHeaderVisible(true);
     };
 
-    const PoppelReuterGhentFigure = () => {
+    const Figures = () => {
         return (
             <div className="flex flex-col items-center">
                 <LetterCrowdingAssessment />
@@ -58,15 +58,15 @@ export default function CorvistCrowding() {
             }
 
             {assessmentState === 'instructions' &&
-                <CrowdingTestInstructions />
+                <CrowdingTestInstructions handlePostCalibration={handlePostCalibration} />
             }
             {assessmentState === 'active' &&
                 <>
-                    <main className="h-full flex flex-col items-center justify-between">
-                        <PoppelReuterGhentFigure />
+                    <main className="h-screen flex justify-center items-center">
+                        <Figures />
                         <div className="fixed bottom-4 right-4">
                             <button className='btn border-4 border-solid border-gray-200 text-gray-500 px-3 py-1 rounded-xl hover:border-sunny \
-                            hover:border-4 hover:text-black'
+                            hover:border-4 hover:text-black '
                                 onClick={handleExit}>Finish Test</button>
                         </div>
                     </main>
@@ -77,6 +77,8 @@ export default function CorvistCrowding() {
                     assessmentName={assessmentName}
                     startTime={startTime}
                     endTime={endTime}
+                    nextUrl="/assessments/questionnaire"
+                    hasNext
                 />
             }
         </>

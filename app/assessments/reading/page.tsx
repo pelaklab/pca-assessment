@@ -62,6 +62,8 @@ export default function ReadingPage() {
                     assessmentName={assessmentName}
                     startTime={startTime}
                     endTime={endTime}
+                    nextUrl="/assessments/crowding"
+                    hasNext
                 />
             }
         </>
