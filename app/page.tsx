@@ -10,7 +10,7 @@ export default function Home() {
     >
       <div className="flex justify-start items-center flex-row space-x-8">
         <Image src={iconPath} alt="" width={93} height={93} />
-        <p className="font-semibold text-3xl mx-4">{text}</p>
+        <p className="font-semibold md:text-3xl text-xl mx-4">{text}</p>
       </div>
       <ArrowForwardIcon style={{ marginRight: '0.75rem' }} className="text-indigo text-5xl" />
     </div>
@@ -22,7 +22,7 @@ export default function Home() {
         <div className="w-full">
           <div className="bg-ivory px-[10%] pb-10 py-20">
             <Image src="/icon.svg" alt="VisCorD logo" width={122} height={67} className="mb-10" />
-            <h1 className="text-6xl font-medium text-left pb-10">Rapid Eye Clinic Screening Battery for Visual Cortical Dysfunction (VisCorD) </h1>
+            <h1 className="lg:text-6xl md:text-4xl text-2xl font-medium text-left pb-10">Rapid Eye Clinic Screening Battery for Visual Cortical Dysfunction (VisCorD) </h1>
 
             <p className="text-2xl font-normal">The VisCorD is a screening battery designed for
               use in eye clinics to identify potential posterior cortical visual dysfunction

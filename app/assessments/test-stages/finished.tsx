@@ -24,8 +24,8 @@ export default function FinishedPage({ assessmentName, startTime, endTime, nextU
     }
 
     return (
-        <main className="bg-ivory h-[calc(100vh-128px)]">
-            <div className="px-[10%] lg:pr-[32] pb-30 py-10 space-y-8 ">
+        <main className="bg-ivory md:h-[calc(100vh-128px)] h-screen">
+            <div className="px-[10%] lg:pr-[32] pb-30 py-10 space-y-8 bg-ivory">
                 <Image src="/icons/done.svg" alt="" width={122} height={67} className="mb-10" />
                 <h1 className="text-6xl font-medium text-left">
                     Test Finished
