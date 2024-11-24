@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const InstructionsPage: React.FC = () => {
     return (
-        <main className="flex h-full flex-col items-start justify-between p-24 bg-ivory text-xl">
+        <main className="flex h-full flex-col items-start justify-between bg-ivory text-xl">
             <div className="px-[10%] pb-6 py-10">
                 <Image src="/icons/scroll.svg" alt="" width={122} height={67} className="mb-10" />
                 <h1 className="text-6xl font-medium text-left">VisCorD Instructions</h1>
@@ -278,7 +278,7 @@ const InstructionsPage: React.FC = () => {
 
             </div>
 
-            <div className="mt-4 px-[10%]">
+            <div className="mt-4 px-[10%] pb-10">
                 <h2 className="text-md"><strong>References:</strong></h2>
                 <ol className="list-decimal list-inside space-y-2 text-sm">
                     <li>

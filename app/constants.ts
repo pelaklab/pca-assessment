@@ -3,6 +3,8 @@ type Link = {
     path: string
 }
 
+export type AssessmentState = 'not-started' | 'instructions' | 'active' | 'finished';
+
 export const assessments: Link[] = [
     { 'name': 'Poppelreuter-Ghent Overlapping Figures', 'path': '/assessments/poppelreuter-ghent' },
     { 'name': 'Navon Figures', 'path': '/assessments/navon' },

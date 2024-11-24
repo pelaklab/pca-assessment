@@ -5,7 +5,6 @@ import { Bars3BottomRightIcon, XMarkIcon, ChevronDownIcon } from '@heroicons/rea
 import { assessments } from '../constants';
 import { useAtom } from 'jotai';
 import { headerVisible } from '../atoms/experimentAtoms';
-import { enterFullscreen, exitFullscreen } from '../interaction';
 import Image from 'next/image';
 
 
@@ -20,14 +19,6 @@ const Header = () => {
     const [submenuOpen, setSubmenuOpen] = useState<number | null>(null)
 
     const [isHeaderVisible, setIsHeaderVisible] = useAtom(headerVisible);
-    const toggleHeader = () => {
-        if (isHeaderVisible) {
-            enterFullscreen();
-        } else {
-            exitFullscreen();
-        }
-        setIsHeaderVisible(!isHeaderVisible);
-    };
     const handleSubmenuToggle = (index: number, hasSubmenu: boolean, event: React.MouseEvent) => {
         if (hasSubmenu) {
             event.preventDefault(); // Prevent navigation for submenu items

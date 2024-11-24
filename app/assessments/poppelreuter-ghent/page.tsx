@@ -5,12 +5,10 @@ import { headerVisible } from "@/app/atoms/experimentAtoms";
 import { useSetAtom } from "jotai";
 import Instructions from "../test-stages/instructions";
 import FinishedPage from "../test-stages/finished";
+import { AssessmentState } from "@/app/constants";
 
 
 export default function PoppelreuterPage() {
-
-    type AssessmentState = 'not-started' | 'active' | 'finished';
-
     const [assessmentState, setAssessmentState] = React.useState<AssessmentState>('not-started');
     const [startTime, setStartTime] = React.useState<number>(0);
     const [endTime, setEndTime] = React.useState<number>(0);
@@ -36,11 +34,13 @@ export default function PoppelreuterPage() {
         );
     }
 
+    const assessmentName = "Poppelreuter-Ghent's Overlapping Figures Task";
     return (
         <>
             {assessmentState === 'not-started' &&
                 <Instructions
-                    figureName="Poppelreuter-Ghent's Overlapping Figures Task"
+                    assessmentName={assessmentName}
+                    iconPath="/icons/umbrella.svg"
                     instructionsText="Ask the patient to name all items they see. If problems arise naming an item or items, ask the patient to describe the item or its use, which is acceptable."
                     handleStart={handleStart}
                 />
@@ -59,7 +59,7 @@ export default function PoppelreuterPage() {
             }
             {assessmentState === 'finished' &&
                 <FinishedPage
-                    assessmentName="Poppelreuter-Ghent's Overlapping Figures Task"
+                    assessmentName={assessmentName}
                     startTime={startTime}
                     endTime={endTime}
                 />
