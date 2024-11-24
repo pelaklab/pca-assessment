@@ -6,7 +6,6 @@ import { assessments } from '../constants';
 import { useAtom } from 'jotai';
 import { headerVisible } from '../atoms/experimentAtoms';
 import { enterFullscreen, exitFullscreen } from '../interaction';
-import ConditionalButton from './Buttons/ConditionalButton';
 import Image from 'next/image';
 
 
@@ -36,25 +35,15 @@ const Header = () => {
         }
     };
 
-    if (!isHeaderVisible) return (
-        <div className='fixed w-full top-0 left-0'>
-            <div className='flex justify-end px-10 py-4'>
-                <button className='btn bg-neutral-700 text-white px-3 py-1 rounded' onClick={toggleHeader}>
-                    END
-                </button>
-            </div>
-        </div>
-    )
-
     return (
         isHeaderVisible && (
             <div className='w-full left-0 z-10 bg-ivory px-5'> {/* Setting z-index for mobile view */}
                 <div className='md:px-10 py-4 px-7 md:flex justify-between items-center bg-ivory'
                 >
-                    <div className='font-bold lg:text-l text-lg cursor-pointer flex items-center gap-1 pr-3'>
+                    <div className='font-semibold lg:text-xl text-lg cursor-pointer flex items-center gap-1 pr-3'>
                         <Image src='/icon.svg' width={30} height={30} alt='VisCorD logo'
                             className="py-10" />
-                        <span className='font-bold'>VisCorD</span>
+                        <span className='font-semibold'>VisCorD</span>
                     </div>
                     {/* Menu icon*/}
                     <div onClick={() => setOpen(!open)} className='absolute right-8 top-7 cursor-pointer md:hidden w-7 h-7'>
@@ -63,7 +52,7 @@ const Header = () => {
 
                     <ul className={
                         `md:flex md:items-center md:pb-0 pb-12 absolute md:static \
-                        last:md:mr-24
+                        last:md:mr-16
                          bg-ivory w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 \
                          ease-in ${open ? 'top-20' : 'top-[-490px]'}`}>
                         {
@@ -90,14 +79,10 @@ const Header = () => {
                                                 ))}
                                             </ul>
                                         )}
-
                                     </li>
                                 )
                             })
                         }
-                        <ConditionalButton className='btn bg-neutral-700 text-white px-3 py-1 md:ml-8 rounded md-static'
-                            buttonText='START'
-                            onClick={toggleHeader} />
                     </ul>
                 </div>
             </div>
