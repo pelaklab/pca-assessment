@@ -1,7 +1,7 @@
 "use client"; // This is a client component
 
 import React, { useState } from 'react';
-import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/16/solid';
+import { Bars3BottomRightIcon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/16/solid';
 import { assessments } from '../constants';
 import { useAtom } from 'jotai';
 import { headerVisible } from '../atoms/experimentAtoms';
@@ -12,10 +12,10 @@ import Image from 'next/image';
 
 const Header = () => {
     const Links = [
-        { name: 'HOME', link: '/', submenu: [] },
-        { name: 'INSTRUCTIONS', link: '/instructions', submenu: [] },
-        { name: 'CONTACT', link: '/contact', submenu: [] },
-        { name: 'TESTS', link: '/all', submenu: assessments },
+        { name: 'Home', link: '/', submenu: [] },
+        { name: 'Instructions', link: '/instructions', submenu: [] },
+        { name: 'Contact', link: '/contact', submenu: [] },
+        { name: 'Tests', link: '/all', submenu: assessments },
     ]
     const [open, setOpen] = useState(false)
     const [submenuOpen, setSubmenuOpen] = useState<number | null>(null)
@@ -69,20 +69,22 @@ const Header = () => {
                         {
                             Links.map((link, index) => {
                                 return (
-                                    <li className='relative my-7 md:my-0 md:ml-12 hover:underline' key={index}>
+                                    <li className='relative my-7 md:my-0 md:ml-12' key={index}>
                                         <a href={link.link} onClick={(event) => handleSubmenuToggle(index, link.submenu.length > 0, event)}>
-                                            {link.name}
-                                            {link.submenu.length > 0 && (
-                                                <span className='ml-2 text-gray-600'>&#9662;</span>
-                                            )}
+                                            <div className="flex flex-row items-center justify-between">
+                                                <span className="hover:underline text-xl font-semibold" >{link.name} </span>
+                                                {link.submenu.length > 0 && (
+                                                    <ChevronDownIcon className='h-4 w-6' />
+                                                )}
+                                            </div>
                                         </a>
                                         {/* Submenu */}
                                         {link.submenu.length > 0 && submenuOpen === index && (
-                                            <ul className='absolute left-0 mt-2 mr-2 bg-ivory shadow-lg rounded-md'>
+                                            <ul className='absolute left-0 mt-2 mr-2 bg-ivory border border-black rounded-2xl divide-y divide-black overflow-hidden'>
                                                 {link.submenu.map((item, subIndex) => (
                                                     <li key={subIndex}
-                                                        className='py-2 px-4 hover:bg-sunny border border-b-gray-300 \
-                                                        min-w-40'>
+                                                        className='py-2 px-4 hover:bg-sunny min-w-40 last-of-type:text-ivory last-of-type:bg-indigo \
+                                                        last-of-type:hover:bg-forget-me-not-purple'>
                                                         <a href={item.path.toLowerCase()}>{item.name}</a>
                                                     </li>
                                                 ))}
