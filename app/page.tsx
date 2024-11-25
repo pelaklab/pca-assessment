@@ -20,7 +20,7 @@ export default function Home() {
     <Provider>
       <main className="flex flex-col items-center justify-between">
         <div className="w-full">
-          <div className="bg-ivory px-[10%] pb-10 py-20">
+          <div className="bg-ivory pl-[12%] pr-[24%] py-24">
             <Image src="/icon.svg" alt="VisCorD logo" width={122} height={67} className="mb-10" />
             <h1 className="lg:text-6xl md:text-4xl text-2xl font-medium text-left pb-10">Rapid Eye Clinic Screening Battery for Visual Cortical Dysfunction (VisCorD) </h1>
 
@@ -32,7 +32,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="bg-indigo text-ivory px-[10%] py-20 space-y-6 text-xl">
+          <div className="bg-indigo text-ivory pl-[12%] pr-[24%] py-24 space-y-10 text-xl">
             <h2 className="text-4xl font-medium">Background</h2>
             <p>
               This screening tool was initially recommended in 2023 by the Posterior Cortical Atrophy (PCA)
@@ -67,7 +67,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="bg-ivory text-indigo px-[10%] py-20 space-y-6 text-xl">
+          <div className="bg-ivory text-indigo pl-[12%] pr-[24%] py-24 space-y-10 text-xl">
             <span className="font-semibold text-3xl">
               This screening battery consists of a threshold visual
               field perimetry and six test items:
@@ -116,7 +116,7 @@ export default function Home() {
           </div>
 
 
-          <div className="space-y-10 text-ivory bg-indigo px-[10%] text-xl py-20">
+          <div className="space-y-10 text-ivory bg-indigo pl-[12%] pr-[24%] text-xl py-24">
             <Image src="/icons/clipboard.svg" alt="" width={86} height={112} className="mb-10" />
             <h2 className="text-4xl font-medium">Interpretation of Results</h2>
 
@@ -131,7 +131,7 @@ export default function Home() {
           </div>
 
 
-          <div className="space-y-10 bg-ivory px-[10%] py-24">
+          <div className="space-y-10 bg-ivory pl-[12%] pr-[24%] py-24">
             <div><strong>*Disclaimer: </strong>
               The items in the battery are recommended to help screen for visual brain dysfunction
               (aka visual cortical dysfunction). The battery should not be used to diagnose visual cortical dysfunction.

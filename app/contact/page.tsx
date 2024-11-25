@@ -3,7 +3,7 @@ export default function Contact() {
 
   return (
     <main className="h-screen w-full bg-ivory">
-      <div className="px-[20%] py-10 space-y-6 bg-ivory">
+      <div className="pl-[12%] pr-[24%] py-10 space-y-6 bg-ivory">
         <Image src="/icons/team.svg" alt="" width={93} height={93} />
         <h1 className="md:text-6xl text-2xl font-medium text-left">About Us</h1>
         <p>Our website functions as an <span className="font-semibold">
@@ -25,7 +25,7 @@ export default function Contact() {
         </p>
       </div>
 
-      <div className="px-[20%] space-y-6 bg-ivory pb-10">
+      <div className="pl-[12%] pr-[24%]  space-y-6 bg-ivory pb-10">
         <h1 className="md:text-6xl text-2xl font-medium text-left">Contact Information</h1>
         <div>
           <p>Lily Noteboom - Neurology Clinical Research Assistant |

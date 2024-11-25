@@ -4,12 +4,12 @@ import Image from 'next/image';
 const InstructionsPage: React.FC = () => {
     return (
         <main className="flex h-full w-full flex-col items-start justify-between bg-ivory text-xl">
-            <div className="px-[10%] pb-6 py-10">
+            <div className="pl-[12%] pr-[24%] pb-6 py-10">
                 <Image src="/icons/scroll.svg" alt="" width={122} height={67} className="mb-10" />
                 <h1 className="text-6xl font-medium text-left">VisCorD Instructions</h1>
             </div>
 
-            <div className="px-[10%] pb-10 py-10 space-y-6">
+            <div className="pl-[12%] pr-[24%] pb-10 py-10 space-y-6">
                 <p>
                     <span className="font-semibold">It is recommended that visual field perimetry and at least two additional items from the VisCorD are performed for screening.
                     </span> If a patient fails has a homonymous
@@ -27,7 +27,7 @@ const InstructionsPage: React.FC = () => {
                 </p>
             </div>
 
-            <div className="px-[10%] pb-10 py-10 space-y-6 text-base">
+            <div className="pl-[12%] pr-[24%] pb-10 py-10 space-y-6 text-base">
 
 
                 {/* Instructions table */}
@@ -278,7 +278,7 @@ const InstructionsPage: React.FC = () => {
 
             </div>
 
-            <div className="mt-4 px-[10%] pb-10">
+            <div className="mt-4 pl-[12%] pr-[24%] pb-10">
                 <h2 className="text-md"><strong>References:</strong></h2>
                 <ol className="list-decimal list-inside space-y-2 text-sm">
                     <li>
