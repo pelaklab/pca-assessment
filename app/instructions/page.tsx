@@ -89,7 +89,7 @@ const InstructionsPage: React.FC = () => {
                                         item or items, ask the patient to describe the item or its use,
                                         which is acceptable.
                                     </td>
-                                    <td className="align-top px-3 py-4space-y-4">
+                                    <td className="align-top px-3 py-4 space-y-4">
                                         <p>
                                             <em>Pass</em>: To pass, the patient must accurately name or describe all four
                                             objects without errors of omission or commission.
