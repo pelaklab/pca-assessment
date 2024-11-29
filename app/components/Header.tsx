@@ -44,7 +44,7 @@ const Header = () => {
     return (
         isHeaderVisible && (
             <div className='w-full left-0 z-10 bg-ivory' ref={menuRef}> {/* Setting z-index for mobile view */}
-                <div className='py-4 pl-10 md:grid md:grid-cols-8 justify-between items-center bg-ivory'
+                <div className='py-4 px-10 md:grid md:grid-cols-8 gap-2 justify-between items-center'
                 >
                     <a href="/" className="md:cols-start-1 md:col-span-1">
                         <div className='font-semibold lg:text-xl text-xl cursor-pointer flex items-center gap-1 pr-3'>
@@ -58,16 +58,16 @@ const Header = () => {
                         {open ? <XMarkIcon /> : <Bars3BottomRightIcon />}
                     </div>
 
-                    <div className="xl:col-span-3 xl:col-start-6 lg:col-span-4 lg:col-start-5 md:col-span-5 md:col-start-4">
+                    <div className="xl:col-span-4 xl:col-start-6 lg:col-span-4 lg:col-start-5 md:col-span-5 md:col-start-3">
                         <ul className={
-                            `pb-2 absolute left-0 md:static \
-                            md:grid md:grid-cols-4 lg:gap-0 md:gap-6
+                            `absolute left-0 md:static \
+                            md:flex md:pb-0
                          bg-ivory md:w-auto w-full pl-6 md:pl-0 transition-all duration-500 \
                          ease-in ${open ? 'top-20' : 'top-[-490px]'}`}>
                             {
                                 Links.map((link, index) => {
                                     return (
-                                        <li className={`relative my-7 text-right`} key={index}>
+                                        <li className={`relative my-7 mr-10`} key={index}>
                                             <a href={link.link}
                                                 onMouseEnter={(event) => handleSubmenuToggle(index, link.submenu.length > 0, event)}
                                             >
