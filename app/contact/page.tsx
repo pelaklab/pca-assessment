@@ -27,7 +27,7 @@ export default function Contact() {
         </p>
       </div>
 
-      <div className="md:col-start-2 md:col-span-5 col-span-6 col-start-2 bg-ivory pb-24 space-y-6">
+      <div className="md:col-start-2 md:col-span-5 col-span-6 col-start-2 bg-ivory space-y-6">
         <h1 className="md:text-4xl text-2xl font-medium text-left">Contact Information</h1>
         <div>
           <p> Colorado Posterior Cortical Atrophy Research |
