@@ -2,10 +2,12 @@ import Image from 'next/image';
 export default function Contact() {
 
   return (
-    <main className="h-screen w-full bg-ivory">
-      <div className="pl-[12%] pr-[24%] py-10 space-y-6 bg-ivory">
-        <Image src="/icons/team.svg" alt="" width={93} height={93} />
-        <h1 className="md:text-6xl text-2xl font-medium text-left">About Us</h1>
+    <main className="h-screen w-full bg-ivory grid grid-cols-8 text-xl">
+      <div className="md:col-start-2 md:col-span-5 col-span-6 col-start-2 bg-ivory space-y-6">
+        <div className="pt-10">
+          <Image src="/icons/team.svg" alt="" width={93} height={93} className="mb-10"/>
+          <h1 className="md:text-4xl text-2xl font-medium text-left">About Us</h1>
+        </div>
         <p>Our website functions as an <span className="font-semibold">
           initial clinical screening tool</span> to assess the
           visual processing and spatial recognition skills of patients, to
@@ -25,16 +27,16 @@ export default function Contact() {
         </p>
       </div>
 
-      <div className="pl-[12%] pr-[24%]  space-y-6 bg-ivory pb-10">
-        <h1 className="md:text-6xl text-2xl font-medium text-left">Contact Information</h1>
+      <div className="md:col-start-2 md:col-span-5 col-span-6 col-start-2 bg-ivory pb-24 space-y-6">
+        <h1 className="md:text-4xl text-2xl font-medium text-left">Contact Information</h1>
         <div>
-          <p>Lily Noteboom - Neurology Clinical Research Assistant |
-            <a href="mailto:lily.noteboom@cuanschutz.edu"
+          <p> Colorado Posterior Cortical Atrophy Research |
+            <a href="mailto:COPCA@CUAnschutz.edu "
               className="text-forget-me-not-purple"
 
             > email</a>
           </p>
-          <p>Katie Li - Web Contractor |
+          <p>Katie Li - Website creator |
             <a href="mailto:katie.li@cuanschutz.edu"
               className="text-forget-me-not-purple"
             > email </a>

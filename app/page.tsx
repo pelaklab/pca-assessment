@@ -4,36 +4,26 @@ import Image from "next/image";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export default function Home() {
-  const TestNavigation = ({ iconPath, text, url }: { iconPath: string; text: string, url: string }) => (
-    <div className="rounded-3xl py-10 px-4 border-black border-2 flex justify-between items-center flex-row hover:bg-sunny group"
-      onClick={() => window.location.href = url}
-    >
-      <div className="flex justify-start items-center flex-row space-x-8">
-        <Image src={iconPath} alt="" width={93} height={93} />
-        <p className="font-semibold md:text-3xl text-xl mx-4">{text}</p>
-      </div>
-      <ArrowForwardIcon style={{ marginRight: '0.75rem' }} className="text-indigo text-5xl" />
-    </div>
-  );
-
   return (
     <Provider>
-      <main className="flex flex-col items-center justify-between">
-        <div className="w-full">
-          <div className="bg-ivory pl-[12%] pr-[24%] py-24">
+      <main className="w-full text-xl">
+        <div className="bg-ivory grid grid-cols-8">
+          <div className="py-24 md:col-start-2 md:col-span-5 col-span-6 col-start-2">
             <Image src="/icon.svg" alt="VisCorD logo" width={122} height={67} className="mb-10" />
-            <h1 className="lg:text-6xl md:text-4xl text-2xl font-medium text-left pb-10">Rapid Eye Clinic Screening Battery for Visual Cortical Dysfunction (VisCorD) </h1>
+            <h1 className="md:text-4xl text-2xl font-medium text-left pb-10">Rapid Eye Clinic Screening Battery for Visual Cortical Dysfunction (VisCorD) </h1>
 
-            <p className="text-2xl font-normal">The VisCorD is a screening battery designed for
+            <p> The VisCorD is a screening battery designed for
               use in eye clinics to identify potential posterior cortical visual dysfunction
               in patients who have <strong>
-                unexplained visual complaints following a comprehensive eye exam*
+                unexplained visual complaints following a comprehensive eye exam* see disclaimer
               </strong>
             </p>
           </div>
+        </div>
 
-          <div className="bg-indigo text-ivory pl-[12%] pr-[24%] py-24 space-y-10 text-xl">
-            <h2 className="text-4xl font-medium">Background</h2>
+        <div className="bg-indigo grid grid-cols-8">
+          <div className=" text-ivory md:col-start-2 md:col-span-5 col-span-6 col-start-2 py-24 space-y-10">
+            <h2 className="md:text-4xl text-2xl font-medium">Background</h2>
             <p>
               This screening tool was initially recommended in 2023 by the Posterior Cortical Atrophy (PCA)
               Assessment Working Party, part of the Alzheimer&apos;s Association International Society to Advance Alzheimer&apos;s
@@ -66,59 +56,13 @@ export default function Home() {
               identifying cortical visual dysfunction within eye clinics.
             </p>
           </div>
-
-          <div className="bg-ivory text-indigo pl-[12%] pr-[24%] py-24 space-y-10 text-xl">
-            <span className="font-semibold text-3xl">
-              This screening battery consists of a threshold visual
-              field perimetry and six test items:
-            </span>
-
-            <p>
-              Information about each item is found on the instructions page,
-              including information on the stimulus (or stimuli),
-              administration instructions, and what constitutes a pass or fail for each item.
-            </p>
-            <TestNavigation iconPath="/icons/umbrella.svg"
-              text="Poppelreuter-Ghent overlapping figures tasks"
-              url="/assessments/poppelreuter-ghent"
-            />
-            <TestNavigation iconPath="/icons/navon.svg"
-              text="Navon Figures Task"
-              url="/assessments/navon"
-            />
-            <TestNavigation
-              iconPath="/icons/pentagons.svg"
-              text="Intersecting Pentagon Copy Task"
-              url="/assessments/pentagons" />
-            <TestNavigation iconPath="/icons/paragraph.svg"
-              text="Paragraph Reading Task"
-              url="/assessments/reading" />
-            <TestNavigation
-              iconPath="/icons/visual_crowding.svg"
-              text="Visual Crowding Task"
-              url="/assessments/crowding" />
-            <TestNavigation
-              iconPath="/icons/cpcq.svg"
-              text="Colorado Posterior Cortical Questionnaire (CPC-Q)"
-              url="/assessments/questionnaire"
-            />
+        </div>
 
 
-            <p className="pt-8">
-              While the battery itself has not been validated, the CPC-Q item has been validated for
-              screening for posterior cortical visual dysfunction (see the instruction page for references).
-              The other five items were arrived at through expert consensus by the PCA Assessment Working Party.
-              <span className="font-semibold"> It is recommended that visual field perimetry and at least two
-                additional items from the VisCorD are
-                performed for screening. </span>
-            </p>
-
-          </div>
-
-
-          <div className="space-y-10 text-ivory bg-indigo pl-[12%] pr-[24%] text-xl py-24">
+        <div className="bg-ivory grid grid-cols-8">
+          <div className="space-y-10 text-indigo bg-ivory md:col-start-2 md:col-span-5 col-span-6 col-start-2 py-24">
             <Image src="/icons/clipboard.svg" alt="" width={86} height={112} className="mb-10" />
-            <h2 className="text-4xl font-medium">Interpretation of Results</h2>
+            <h2 className="md:text-4xl text-2xl font-medium">Interpretation of Results</h2>
 
             <p>
               If the patient has evidence of a homonymous visual field defect without an imaging
@@ -129,9 +73,10 @@ export default function Home() {
             </p>
 
           </div>
+        </div>
 
-
-          <div className="space-y-10 bg-ivory pl-[12%] pr-[24%] py-24">
+        <div className="bg-indigo grid grid-cols-8">
+          <div className="space-y-10 bg-indigo text-ivory md:col-start-2 md:col-span-5 col-span-6 col-start-2 py-24">
             <div><strong>*Disclaimer: </strong>
               The items in the battery are recommended to help screen for visual brain dysfunction
               (aka visual cortical dysfunction). The battery should not be used to diagnose visual cortical dysfunction.

@@ -40,7 +40,7 @@ const NavonImages: React.FC = () => {
                 onClick={() => setIndicatorVisibility(!indicatorsVisible)}
                 style={{
                     width: '100%',
-                    height: 'auto',
+                    height: '40vh',
                 }}
                 width={400}
                 height={300}
