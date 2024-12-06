@@ -10,10 +10,13 @@ export default function Home() {
         <div className="bg-ivory grid grid-cols-8">
           <div className="py-24 md:col-start-2 md:col-span-5 col-span-6 col-start-2">
             <Image src="/icon.svg" alt="VisCorD logo" width={122} height={67} className="mb-10" />
-            <h1 className="md:text-4xl text-2xl font-medium text-left pb-10">Rapid Eye Clinic Screening Battery for Visual Cortical Dysfunction (VisCorD) </h1>
+            <h1 className="md:text-4xl text-2xl font-medium text-left pb-10">
+              Rapid Eye Clinic Screening Battery for Visual Cortical Dysfunction (VisCorD) & Visual Field Perimetry
+            </h1>
 
-            <p> The VisCorD is a screening battery designed for
-              use in eye clinics to identify potential posterior cortical visual dysfunction
+            <p> The VisCorD screening battery is designed for
+              use in eye clinics along with the Visual Field Perimetry
+              to identify potential posterior cortical visual dysfunction
               in patients who have <strong>
                 unexplained visual complaints following a comprehensive eye exam* see disclaimer
               </strong>

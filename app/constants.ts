@@ -12,4 +12,5 @@ export const assessments: Link[] = [
     { 'name': 'Reading', 'path': '/assessments/reading' },
     { 'name': 'Crowding', 'path': '/assessments/crowding' },
     { 'name': 'CPC Questionnaire', 'path': '/assessments/questionnaire' },
+    { 'name': 'Overview', 'path': '/assessments' }
 ]

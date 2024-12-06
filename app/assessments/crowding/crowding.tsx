@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/16/solid';
-import { headerVisible } from '@/app/atoms/experimentAtoms';
-import { useAtomValue } from 'jotai';
 import localFont from 'next/font/local'
 
 const sloanFont = localFont({
@@ -31,12 +29,7 @@ const LetterCrowdingAssessment: React.FC = () => {
     ]
 
     const [currentIndex, setCurrentIndex] = useState(0);
-    const isHeaderVisible = useAtomValue(headerVisible)
     const [indicatorsVisible, setIndicatorVisibility] = useState(true)
-
-    useEffect(() => {
-        setIndicatorVisibility(isHeaderVisible)
-    }, [isHeaderVisible])
 
     // Handler to show the next image
     const handleNextString = () => {

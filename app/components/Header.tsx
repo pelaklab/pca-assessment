@@ -83,7 +83,10 @@ const Header = () => {
                                                 <ul className='absolute left-0 mt-2 mr-2 bg-ivory border border-black rounded-2xl divide-y divide-black overflow-hidden z-20'>
                                                     {link.submenu.map((item, subIndex) => (
                                                         <li key={subIndex}
-                                                            className='py-2 md:px-4 px-2 min-w-40 hover:bg-sunny text-left'>
+                                                            className='py-2 md:px-4 px-2 min-w-40 hover:bg-sunny text-left \
+                                                            last-of-type:text-ivory last-of-type:bg-indigo
+                                                            last-of-type:hover:bg-forget-me-not-purple
+                                                            '>
                                                             <a href={item.path.toLowerCase()}>{item.name}</a>
                                                         </li>
                                                     ))}

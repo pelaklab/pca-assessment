@@ -74,15 +74,23 @@ const Questionnaire: React.FC = () => {
 
         <button
           type="submit"
-          className="bg-gray-400 text-white py-3 px-5 rounded-lg hover:bg-indigo-700 transition font-semibold text-lg"
+          disabled={answers.some((answer) => answer === null)}
+          className={`py-3 px-5 rounded-lg transition font-semibold text-lg ${answers.some((answer) => answer === null)
+            ? 'bg-gray-500 text-white border border-gray-600 rounded px-4 py-2 cursor-not-allowed opacity-50'
+            : 'bg-indigo text-white hover:text-black hover:bg-sunny'
+            }`}
         >
           Calculate Score
         </button>
+        {answers.some((answer) => answer === null) ?
+          <p className="text-red-700 text-sm">*Please answer all questions before submitting.</p>
+          : null
+        }
       </form>
 
       {score !== null && (
-        <div className="mt-8 p-6 bg-green-100 text-green-800 rounded-lg">
-          <h2 className="text-2xl font-semibold">Your Total Score: {score}</h2>
+        <div className="mt-8 p-6 border-indigo border text-indigo rounded-lg">
+          <h2 className="text-2xl font-semibold">Total Score: {score}</h2>
         </div>
       )}
     </div>
