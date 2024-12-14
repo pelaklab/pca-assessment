@@ -2,8 +2,8 @@ import Image from 'next/image';
 export default function Contact() {
 
   return (
-    <main className="h-screen w-full bg-ivory grid grid-cols-8 text-xl">
-      <div className="md:col-start-2 md:col-span-5 col-span-6 col-start-2 bg-ivory space-y-6">
+    <main className="h-full w-full bg-ivory text-xl grid grid-cols-8">
+      <div className="md:col-start-2 md:col-span-5 col-span-6 col-start-2 space-y-6">
         <div className="pt-10">
           <Image src="/icons/team.svg" alt="" width={93} height={93} className="mb-10" />
           <h1 className="md:text-4xl text-2xl font-medium text-left">About Us</h1>
@@ -49,9 +49,9 @@ export default function Contact() {
             </li>
           </ul>
         </div>
-        <div className="space-y-1">
+        <div className="space-y-1 pb-10">
           <p>
-          To contact about tasks, scoring or general questions of the screening assessment on this website:&nbsp;
+            To contact about tasks, scoring or general questions of the screening assessment on this website:&nbsp;
             <a href="mailto:copca@cuanschutz.edu"
               className="text-forget-me-not-purple underline hover:no-underline">email</a>
           </p>
@@ -64,5 +64,4 @@ export default function Contact() {
       </div>
     </main>
   );
-
 }
