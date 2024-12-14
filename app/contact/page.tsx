@@ -49,42 +49,17 @@ export default function Contact() {
             </li>
           </ul>
         </div>
-        <div className="space-y-1">
-          To contact about tasks, scoring or general questions of the screening assessment on this website:&nbsp;
-          <a href="mailto:copca@cuanschutz.edu"
-            className="text-forget-me-not-purple underline hover:no-underline">email</a>
-          <p>Our website functions as an <span className="font-semibold">
-            initial clinical screening tool</span> to assess the
-            visual processing and spatial recognition skills of patients, to
-            improve the diagnosis of patients with posterior cortical atrophy (PCA).
-            PCA is a rare form of Alzheimer&apos;s disease often presents with visual issues
-            and is misdiagnosed because of its atypical presentation</p>
-
-          <p>This work is part of&nbsp;
-            <a href="https://www.uchealth.org/provider/victoria-pelak-md/"
-              className="font-medium text-forget-me-not-purple underline hover:no-underline">
-              Dr. Victoria Pelak&apos;s
-            </a>
-            &nbsp;clinical research.
-
-            She is a neuro-opthamologist at the University of Colorado Anschutz Medical Campus,
-            a professor in the Department of Neurology and Ophthalmology.
+        <div className="space-y-1 pb-10">
+          <p>
+            To contact about tasks, scoring or general questions of the screening assessment on this website:&nbsp;
+            <a href="mailto:copca@cuanschutz.edu"
+              className="text-forget-me-not-purple underline hover:no-underline">email</a>
           </p>
-
-          <h1 className="md:text-4xl text-2xl font-medium text-left">Contact Information</h1>
-          <div className="pb-10">
-            <p> Colorado Posterior Cortical Atrophy Research |
-              <a href="mailto:COPCA@CUAnschutz.edu "
-                className="text-forget-me-not-purple"
-
-              > email</a>
-            </p>
-            <p>
-              To contact about the website:&nbsp;
-              <a href="mailto:katie.li@cuanschutz.edu"
-                className="text-forget-me-not-purple underline hover:no-underline">email</a>
-            </p>
-          </div>
+          <p>
+            To contact about the website:&nbsp;
+            <a href="mailto:katie.li@cuanschutz.edu"
+              className="text-forget-me-not-purple underline hover:no-underline">email</a>
+          </p>
         </div>
       </div>
     </main>
