@@ -1,6 +1,6 @@
 import Image from 'next/image';
 export default function Contact() {
-
+// fake comment
   return (
     <main className="h-full w-full bg-ivory text-xl grid grid-cols-8">
       <div className="md:col-start-2 md:col-span-5 col-span-6 col-start-2 space-y-6">
