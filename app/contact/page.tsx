@@ -40,7 +40,7 @@ export default function Contact() {
               Asher Mahood
             </li>
             <li>
-              Katie Li - Website creator
+              Katie Li
             </li>
             <li>
               Jessica St. Onge - Design and UX research -&nbsp;
