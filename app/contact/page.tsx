@@ -40,7 +40,10 @@ export default function Contact() {
               Asher Mahood
             </li>
             <li>
-              Katie Li
+              Katie S. Li
+            </li>
+            <li>
+              David Vu
             </li>
             <li>
               Jessica St. Onge - Design and UX research -&nbsp;
