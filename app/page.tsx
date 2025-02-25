@@ -18,7 +18,7 @@ export default function Home() {
               use in eye clinics along with the Visual Field Perimetry
               to identify potential posterior cortical visual dysfunction
               in patients who have <strong>
-                unexplained visual complaints following a comprehensive eye exam* see disclaimer
+                unexplained visual complaints following a comprehensive eye exam* see disclaimer. 
               </strong>
             </p>
             <br />
