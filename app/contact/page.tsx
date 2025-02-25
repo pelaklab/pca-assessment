@@ -9,7 +9,7 @@ export default function Contact() {
           <h1 className="md:text-4xl text-2xl font-medium text-left">About Us</h1>
         </div>
         <p>
-          This resource was developed by <a href="https://medschool.cuanschutz.edu/neurology/faculty"
+          This resource was developed by <a href="https://medschool.cuanschutz.edu/neurology/faculty" target="_new"
             className="text-forget-me-not-purple underline hover:no-underline">
             Dr. Victoria Pelak</a>&nbsp;
           and her research team to provide a
@@ -18,7 +18,7 @@ export default function Contact() {
           atrophy (PCA) syndrome, which is most commonly caused by Alzheimer&apos;s disease and,
           less commonly, dementia with Lewy bodies. Dr. Pelak leads Colorado Posterior Cortical
           Atrophy Support, and the webpages and additional resources can be found&nbsp;
-          <a href="https://medschool.cuanschutz.edu/pca"
+          <a href="https://medschool.cuanschutz.edu/pca" target="_new"
             className="text-forget-me-not-purple underline hover:no-underline"
           >
             here
@@ -47,7 +47,7 @@ export default function Contact() {
             </li>
             <li>
               Jessica St. Onge - Design and UX research -&nbsp;
-              <a href="https://www.jkstonge.com/"
+              <a href="https://www.jkstonge.com/" target="_new"
                 className="text-forget-me-not-purple underline hover:no-underline">website</a>
             </li>
           </ul>
@@ -55,12 +55,12 @@ export default function Contact() {
         <div className="space-y-1 pb-10">
           <p>
             To contact about tasks, scoring or general questions of the screening assessment on this website:&nbsp;
-            <a href="mailto:copca@cuanschutz.edu"
+            <a href="mailto:copca@cuanschutz.edu" target="_new"
               className="text-forget-me-not-purple underline hover:no-underline">email</a>
           </p>
           <p>
             To contact about the website:&nbsp;
-            <a href="mailto:katie.li@cuanschutz.edu"
+            <a href="mailto:katie.li@cuanschutz.edu" target="_new"
               className="text-forget-me-not-purple underline hover:no-underline">email</a>
           </p>
         </div>
