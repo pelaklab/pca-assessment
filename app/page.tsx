@@ -21,8 +21,8 @@ export default function Home() {
                 unexplained visual complaints following a comprehensive eye exam* see disclaimer. 
               </strong>
             </p>
-            <br/>
-            <br/>
+            <br />
+            <br />
             <p><a href="https://redcap.ucdenver.edu/surveys/?s=EJLK3LN3F9WANDF4" target="_new" style="color:blue; text-decoration:underline"><u>Click here to take the survey</u></a> to help the designers know more about who is utilizing this screening assessment. This information will only be accessible by the team base at University of Colorado School of Medicine.</p>
           </div>
         </div>
