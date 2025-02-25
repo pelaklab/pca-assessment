@@ -60,7 +60,7 @@ export default function Contact() {
           </p>
           <p>
             To contact about the website:&nbsp;
-            <a href="mailto:katie.li@cuanschutz.edu" target="_new"
+            <a href="mailto:david.2.vu@cuanschutz.edu" target="_new"
               className="text-forget-me-not-purple underline hover:no-underline">email</a>
           </p>
         </div>
