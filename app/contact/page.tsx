@@ -43,7 +43,7 @@ export default function Contact() {
               Katie S. Li
             </li>
             <li>
-              David Vu
+              David Vu (IT Manager)
             </li>
             <li>
               Jessica St. Onge - Design and UX research -&nbsp;
