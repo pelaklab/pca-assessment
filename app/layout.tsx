@@ -16,6 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
+        <meta name="google-site-verification" content="CUVVdns41zMfwvE0TDrgjqOrx5Kg9JbC3wL6MepnGpo" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
       </head>
       <body>
